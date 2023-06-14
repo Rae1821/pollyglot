@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PollyGlot</title>
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img class="parrot-img" src="assets/parrot.png" alt="parrot header" />
+        <div class="title-section">
+            <h1>PollyGlot</h1>
+            <p>Perfect translation every time</p>
+        </div>
+    </header>
+    
+    <main>
+
+        <section class="chat-container" id="chat-container">
+            <div class="chatbot-conversation-container" id="chatbot-conversation-container">
+                <div class="speech speech-ai">
+                    Select the language you want me to translate into, 
+                    type your text and hit send!
+                </div>
+            </div>
+
+            <form id="form" class="chatbot-input-container">
+                <div class="input-container">
+                    <input name="user-input" type="text" id="user-input" required>
+                    <button id="submit-btn" class="submit-btn">
+                        <img src="assets/send-btn-icon.png" 
+                        class="send-btn" alt="Send" />
+                    </button>
+                </div>
+                
+                <div class="language-selector">
+                    <input type="radio" id="french" name="language" value="French">
+                    <label for="french">
+                        <img class="flag" src="assets/fr-flag.png" />
+                    </label><br>
+                    <input type="radio" id="spanish" name="language" value="Spanish">
+                    <label for="spanish">
+                        <img class="flag" src="assets/sp-flag.png" />
+                    </label><br>
+                    <input type="radio" id="japanese" name="language" value="Japanese">
+                    <label for="japanese">
+                        <img class="flag flag-jpn" src="assets/jpn-flag.png" />
+                    </label><br>
+                </div>
+            </form>
+
+
+
+        </section>
+
+
+
+
+
+
+
+        <!-- The Setup -->
+        <!-- <section class="setup-container" id="setup-container">
+            <div class="setup-inner" id="setup-inner">
+                <div class="setup-inner-upper">
+                    <p id="upper-text">Text to translate 👇</p>
+                    <textarea id="textarea" placeholder="How are you?"></textarea>    
+                </div>
+                <div class="setup-inner-lower" id="setup-inner-lower">
+                    <p id="lower-text">Select a language 👇</p>
+                    <input type="radio" id="french" name="language" value="French">
+                    <label for="french">French 🇫🇷</label><br>
+                    <input type="radio" id="spanish" name="language" value="Spanish">
+                    <label for="spanish">Spanish 🇪🇸</label><br>
+                    <input type="radio" id="japanese" name="language" value="Japanese">
+                    <label for="japanese">Japanese 🇯🇵</label><br>
+                    <button class="translate-btn" id="translate-btn">Translate</button>
+                </div> -->
+
+                 <!-- The output -->
+                <!-- <div id="output-translation" class="output-translation hide">
+                    <p>Your translation 👇</p>
+                    <textarea id="translation-text"></textarea>  
+                    <button id="start-over-btn" class="start-over-btn">Start Over</button>
+                </div>
+            </div>
+        </section> -->
+
+           
+      
+      
+
+        
+
+
+
+
+    </main>
+
+
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>

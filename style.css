@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+header {
+    background-image: url('assets/worldmap.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.parrot-img {
+    width: 25%;
+}
+
+h1 {
+    color: #32CD32;
+    margin-bottom: 0;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.title-section > p {
+    color: white;
+    margin-top: 0;
+}
+
+.setup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.setup-inner {
+    border: 4px solid black;
+    padding: .5em 2em 1em;
+    margin-top: 2em;
+    border-radius: 15px;
+    width: 75%;
+}
+
+.setup-inner-upper > p,
+.setup-inner-lower > p,
+.output-translation > p {
+    color: #035A9D;
+    font-weight: 700;
+    text-align: center;
+}
+
+textarea {
+    background-color: #EFF0F4;
+    border: none;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: .875rem;
+    font-weight: 700;
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    padding: 1em;
+    color: #333333;
+}
+
+.translate-btn,
+.start-over-btn {
+    background-color: #035A9D;
+    border: none;
+    width: 100%;
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border-radius: 6px;
+    margin: 2em 0;
+    padding: .25em 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/********** Output ************/
+
+.hide {
+    display: none;
+}
+
+.chat-container {
+    border: 4px solid black;
+    padding: .5em 1em 1em;
+    margin: 2em auto 2em;
+    border-radius: 15px;
+    width: 360px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.chatbot-conversation-container {
+    max-height: 250px;
+    min-height: 250px;
+    overflow-y: scroll;
+    margin: 1em 0;
+}
+
+/* stop ugly scroll bar on some browsers */
+.chatbot-conversation-container::-webkit-scrollbar{
+    display: none;
+}
+
+.chatbot-conversation-container::-moz-scrollbar{
+    display: none;
+}
+
+.speech {
+    padding: 1em;
+    margin: 1em auto;
+    max-width: 260px;
+    color: white;
+    min-width: 100%;
+    border-radius: 10px;
+    background-color: #035A9D;
+}
+
+
+.speech:first-child {
+    margin-top: 0;
+}
+
+.speech-ai {
+    background-color: #035A9D;
+    border-top-left-radius: 0;
+}
+
+.speech-human {
+    background: #32CD32;
+    border-top-right-radius: 0;
+}
+
+.input-container {
+    display: flex;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+label {
+  width: 50px;
+  height: 33px;    
+}
+
+.flag:hover,
+.flag:focus-within {
+    border: 3px solid #035A9D;
+    cursor: pointer;
+}
+
+.flag-jpn {
+    border: 1px solid #999999;
+}
+
+input[type="radio"]:checked + label {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 2px solid #035A9D;
+}
+
+input[type="text"], button{
+    background-color: transparent;
+    border: 1px solid #586E88;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+input[type="text"] {
+    color: black;
+    width: 100%;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.submit-btn {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.send-btn-icon {
+    width: 20px;
+    display: block;
+}
+
