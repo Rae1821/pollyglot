@@ -1,9 +1,7 @@
 import { Configuration, OpenAIApi } from 'openai'
-import { process } from './env'
-
 
 const configuration = new Configuration({
-    //organization: 'org-XC0s1PRokBlhgvcw6fyI5iQa',
+    organization: 'org-XC0s1PRokBlhgvcw6fyI5iQa',
     apiKey: process.env.OPENAI_API_KEY
 })
 
