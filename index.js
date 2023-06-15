@@ -23,7 +23,7 @@ document.addEventListener('submit', (e) => {
 
 async function fetchBotTranslation(phrase, language) {
 
-    const url = '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'
+    const url = 'https://pollyglot.netlify.app/.netlify/functions/fetchAI'
 
     const response = await fetch(url, {
         method: "POST",
