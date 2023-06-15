@@ -1,14 +1,4 @@
 
-import { Configuration, OpenAIApi } from 'openai'
-import { process } from './env'
-
-
-const configuration = new Configuration({
-    //organization: 'org-XC0s1PRokBlhgvcw6fyI5iQa',
-    apiKey: process.env.OPENAI_API_KEY
-})
-
-const openai = new OpenAIApi(configuration)
 
 
 const chatbotConversation = document.getElementById('chatbot-conversation-container')
@@ -32,9 +22,16 @@ document.addEventListener('submit', (e) => {
 
 
 async function fetchBotTranslation(phrase, language) {
-    const response = await openai.createCompletion({
-        model: 'text-davinci-003',
-        prompt: `Translate the phrase from English to the checked language.
+
+    const url = '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'
+
+    const response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "content-type": "text/plain"
+        },
+        body:  
+        `Translate the phrase from English to the checked language.
         ###
         userInput: Hello, how are you today?
         translation in japanese: こんにちは元気ですか
@@ -50,10 +47,12 @@ async function fetchBotTranslation(phrase, language) {
         
         `,
     })
-    renderTypewriterText(response.data.choices[0].text.trim())
+
+   const data = await response.json()
+
+    renderTypewriterText(data.choices[0].text)
    
 }
-
 
 
 function renderTypewriterText(text) {
