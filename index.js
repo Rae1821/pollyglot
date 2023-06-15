@@ -49,8 +49,8 @@ async function fetchBotTranslation(phrase, language) {
     })
 
    const data = await response.json()
-
-    renderTypewriterText(data.choices[0].text.trim())
+    console.log(data)
+    renderTypewriterText(data.reply.choices[0].text.trim())
    
 }
 
